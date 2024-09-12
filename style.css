@@ -14,19 +14,28 @@ h2 {
   font-size: 28px;
   line-height: 100%;
   font-weight: 400;
+  color: #854632;
+  margin-bottom: 24px;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
 }
 
-li {
+ul li {
   position: relative;
   padding-left: 30px;
   margin-bottom: 5px;
 }
 
-li::before {
+ol li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+}
+
+ul li::before {
   content: "";
   position: absolute;
   left: 10px;
@@ -36,6 +45,20 @@ li::before {
   height: 5px;
   background: #000;
   border-radius: 100%;
+}
+
+ol li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #854632;
+  font-weight: 600;
+}
+
+ol {
+  counter-reset: item;
 }
 
 em {
@@ -116,11 +139,36 @@ ul li em {
 .ingredients {
   margin-top: 32px;
 }
-.ingredients h2 {
-  margin-bottom: 24px;
-  color: #854632;
-}
 
 .ingredients ul li::before {
   background: #854632;
+}
+
+.nutrition p {
+  margin-bottom: 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  border-top: 1px solid #e3ddd7;
+  border-bottom: 1px solid #e3ddd7;
+  padding: 8px;
+  text-align: left;
+}
+tr:first-child td {
+  border-top: none;
+}
+table tr:nth-child(4) td {
+  border-bottom: none;
+}
+table tr td:last-child {
+  color: #854632;
+  font-weight: 600;
+}
+
+table tr td:first-child {
+  padding-left: 32px;
+  width: 115px;
 }
