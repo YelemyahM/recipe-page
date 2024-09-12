@@ -178,6 +178,16 @@ table tr td:last-child {
 }
 
 @media screen and (min-width: 375px) {
-  table tr td:first-child {
+  main {
+    padding: 40px;
+  }
+
+  header img {
+    margin-bottom: 40px;
+    border-radius: 10px;
+  }
+
+  .article {
+    padding: 0;
   }
 }
