@@ -5,6 +5,17 @@
   margin: 0;
 }
 
+h1,
+h2 {
+  font-family: "Young Serif", system-ui;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: 400;
+}
+
 ul {
   list-style-type: none;
 }
@@ -30,6 +41,13 @@ li::before {
 em {
   font-style: normal;
   font-weight: 600;
+}
+
+hr {
+  border: none;
+  background: #e3ddd7;
+  height: 1px;
+  margin: 32px 0;
 }
 
 body {
@@ -64,8 +82,7 @@ article {
   padding: 40px 32px;
 }
 
-h1 {
-  font-family: "Young Serif", system-ui;
+.presentation h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 40px;
@@ -94,4 +111,16 @@ h3 {
 ul li em {
   color: #5f564d;
   font-weight: 600;
+}
+
+.ingredients {
+  margin-top: 32px;
+}
+.ingredients h2 {
+  margin-bottom: 24px;
+  color: #854632;
+}
+
+.ingredients ul li::before {
+  background: #854632;
 }
